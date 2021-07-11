@@ -17,3 +17,7 @@ Game.prototype.assignId = function() {
   return this.currentId;
 };
 
+Game.prototype.addPlayer = function(player) {
+  player.id = this.assignId();
+  this.players[player.id] = player;
+};
