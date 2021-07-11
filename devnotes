@@ -1,0 +1,61 @@
+What will happen when the user clicks "Play"?
+
+* The board will be shown
+* Names will be gathered, recorded, and populated on the game board 
+
+What objects will you need?
+
+* Multi-game tracker
+* Game
+* Player
+
+What key-value pairs will each object need to contain in order for the game to work?
+
+* Multi-game tracker > Game > Player: (Names, Scores) > (Roll, Game) 
+
+GAME:
+Players: {players}
+CurrentId: 0
+CurrentPlayer: 1 or 2
+
+PLAYERS:
+Name: playerName
+GameScore: gameScore
+TurnScore: turnScore
+Id: #
+
+What functions?
+
+* Assign ID
+* Add Player
+* Find Current Player
+* Die Roll
+* Tally Turn Score
+* End Turn
+* Switch Player
+* Winner Check
+* New Game
+
+How will these be triggered throughout the gameplay?
+
+* Assign ID > triggered by Add Player functions
+* Add Player > triggered by clicking Play button
+* Find Current Player > triggered by Tally Turn Score and End Score
+* Die Roll > triggered by clicking Roll button
+* Tally Turn Score > triggered by Die Roll
+* End Turn > triggered by clicking "hold" button or player rolling a "1"
+* Switch Player > triggered by End Turn
+* Winner Check > triggered by Tally Turn Score
+* New Game > triggered by "New Game" button
+
+TESTS
+
+Test 1: Player constructor
+Test 2: Game constructor
+Test 3: Assign ID
+Test 4: Add Player
+Test 5: Find Current Player
+Test 6: Die Roll
+
+
+
