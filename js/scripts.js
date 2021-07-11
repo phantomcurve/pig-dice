@@ -12,12 +12,16 @@ function Game() {
   this.currentPlayer = 1;
 }
 
+Game.prototype.addPlayer = function(player) {
+  player.id = this.assignId();
+  this.players[player.id] = player;
+};
+
 Game.prototype.assignId = function() {
   this.lastIdUsed += 1;
   return this.lastIdUsed;
 };
 
-Game.prototype.addPlayer = function(player) {
-  player.id = this.assignId();
-  this.players[player.id] = player;
+Game.prototype.findCurrentPlayer = function() {
+  return this.players[this.currentPlayer];
 };
