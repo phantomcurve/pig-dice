@@ -56,6 +56,11 @@ Test 3: Assign ID
 Test 4: Add Player
 Test 5: Find Current Player
 Test 6: Die Roll
+Test 7: Tally Turn Score
+Test 8: Winner Check
+Test 9: Switch Player
+Test 10: End Turn
+Test 11: New Game
 
 
 
