@@ -16,16 +16,20 @@ Expect(let player = new Player("Jimmy")).toEqual(Player { name: "Jimmy", gameSco
 
 Describe: Gameconstructor
 Test: "It will create a game that contains the properties players, lastIdUsed and CurrentPlayer"
-Expect(let game = new Game()).toEqual(Game { players{}, lastIdUsed: 0, currentPlayer: 1})
+Expect(let game1 = new Game()).toEqual(Game { players{}, lastIdUsed: 0, currentPlayer: 1})
 
 Describe: Game.prototype.assignId()
 Test: "It will increment the lastIdUsed property and return the lastIdUsed value"
-Expect(game.assignId()).toEqual({ players{}, lastIdUsed: 1, currentPlayer: 1})
+Expect(game1.assignId()).toEqual({ players{}, lastIdUsed: 1, currentPlayer: 1})
 
 Describe: Game.prototype.addPlayer()
 Test: "It will take a player instance as an argument, its gonna call the assign ID method, its gonna assign a player Id value to that instance, the it wil add that instance to the games players property.
-Expect(game.addPlayer("Jimmy")).toEqual({ players{1 { name: "Jimmy", gameScore: 0, turnScore: 0 }, lastIdUsed: 1, currentPlayer: 1})
+Expect(game1.addPlayer("Jimmy")).toEqual({ players{1 { name: "Jimmy", gameScore: 0, turnScore: 0 }, lastIdUsed: 1, currentPlayer: 1})
 
 Describe: Game.prototype.findCurrentPlayer()
 Test: "It will check the value of the current player property and return the value of the matching ID."
-Expect(game.findCurrentPlayer()).toEqual(Game {1 {name: "Jimmy", gameScore: 0, turnScore: 0}})
+Expect(game1.findCurrentPlayer()).toEqual(Game {1 {name: "Jimmy", gameScore: 0, turnScore: 0}})
+
+Describe: Game.prototype.dieRoll()
+Test: "It will generate a random whole number between 1 and 6, inclusive"
+Expect(game1.prototype.dieRoll()).toEqual(1 or 2 or 3 or 4 or 5 or 6)

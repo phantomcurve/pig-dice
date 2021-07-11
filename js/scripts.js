@@ -25,3 +25,7 @@ Game.prototype.assignId = function() {
 Game.prototype.findCurrentPlayer = function() {
   return this.players[this.currentPlayer];
 };
+
+Game.prototype.dieRoll = function() {
+  return Math.floor((Math.random() * 6) + 1);
+};
