@@ -8,13 +8,13 @@ function Player(name) {
 
 function Game() {
   this.players = {};
-  this.currentId = 0;
+  this.lastIdUsed = 0;
   this.currentPlayer = 1;
 }
 
 Game.prototype.assignId = function() {
-  this.currentId += 1;
-  return this.currentId;
+  this.lastIdUsed += 1;
+  return this.lastIdUsed;
 };
 
 Game.prototype.addPlayer = function(player) {
