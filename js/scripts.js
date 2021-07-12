@@ -29,3 +29,12 @@ Game.prototype.findCurrentPlayer = function() {
 Game.prototype.dieRoll = function() {
   return Math.floor((Math.random() * 6) + 1);
 };
+
+//START HERE: TEST THIS CODE
+Game.prototype.switchCurrentPlayer = function() {
+  if (this.currentPlayer = 1) {
+    this.currentPlayer = 2;
+  } else {
+    this.currentPlayer = 1;
+  }
+};
