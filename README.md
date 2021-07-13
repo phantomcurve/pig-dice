@@ -44,6 +44,9 @@ Describe: Game.prototype.endTurn();
 Test: "It will add a players turnScore to their gameScore, reset the turnScore to zero, and call the .switchCurrentPlayer() method."
 Expect(game1.endTurn(player1)).toEqual(Game { players{1 { name: "Jimmy", gameScore: 4, turnScore: 0 }}, {2 { name: "Jan", gamescore: 0, turnScore: 0}}, lastIdUsed: 2, currentPlayer: 2})
 
-<!-- Describe: Player.prototype.tallyTurnScore()
+Describe: Player.prototype.tallyTurnScore(player, roll)
 Test: "If the player rolls any number other than 1, it will take the die roll and add it to the turnScore property. If the player rolls a 1, the turnScore will be reset to 0 and the player's turn will end by calling the endTurn function."
-Expect(player1.prototype.tallyTurnScore()).toEqual(Game {1 {name: "Jimmy", gameScore: 0, turnScore: 4}}) -->
+Rolled a 4:
+Expect(game1.endTurn(player1)).toEqual(Game { players{1 { name: "Jimmy", gameScore: 0, turnScore: 4 }}, {2 { name: "Jan", gamescore: 0, turnScore: 0}}, lastIdUsed: 2, currentPlayer: 1})
+Rolled a 1:
+Expect(game1.endTurn(player1)).toEqual(Game { players{1 { name: "Jimmy", gameScore: 0, turnScore: 0 }}, {2 { name: "Jan", gamescore: 0, turnScore: 0}}, lastIdUsed: 2, currentPlayer: 2})

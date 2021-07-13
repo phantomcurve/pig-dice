@@ -44,6 +44,15 @@ Game.prototype.endTurn = function(player) {
   this.switchCurrentPlayer();
 };
 
+Game.prototype.tallyTurnScore = function(player, roll) {
+  if (roll === 1) {
+    player.turnScore = 0;
+    this.endTurn(player);
+  } else {
+    player.turnScore += roll;
+  }
+};
+
 
 //Testing
 let game1 = new Game();
