@@ -31,9 +31,23 @@ Game.prototype.dieRoll = function() {
 };
 
 Game.prototype.switchCurrentPlayer = function() {
-  if (this.currentPlayer = 1) {
+  if (this.currentPlayer === 1) {
     this.currentPlayer = 2;
   } else {
     this.currentPlayer = 1;
   }
 };
+
+Game.prototype.endTurn = function(player) {
+  player.gameScore += player.turnScore;
+  player.turnScore = 0;
+  this.switchCurrentPlayer();
+};
+
+
+//Testing
+let game1 = new Game();
+let player1 = new Player("Jimmy");
+let player2 = new Player("Pam");
+game1.addPlayer(player1);
+game1.addPlayer(player2);
