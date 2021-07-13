@@ -54,6 +54,15 @@ Game.prototype.tallyTurnScore = function(player, roll) {
   }
 };
 
+Game.prototype.winnerCheck = function(player) {
+  if (player.gameScore + player.turnScore >= 100) {
+    this.isWon = true;
+    return true;
+  } else {
+    return false;
+  }
+};
+
 
 //Testing
 let game1 = new Game();
