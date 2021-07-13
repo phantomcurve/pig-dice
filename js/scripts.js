@@ -10,6 +10,7 @@ function Game() {
   this.players = {};
   this.lastIdUsed = 0;
   this.currentPlayer = 1;
+  this.isWon = false;
 }
 
 Game.prototype.addPlayer = function(player) {
