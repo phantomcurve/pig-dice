@@ -54,3 +54,7 @@ Expect(game1.endTurn(player1)).toEqual(Game { players{1 { name: "Jimmy", gameSco
 Describe: Game.prototype.winnerCheck(player)
 Test: "It will assess whether the sum of a player's gameScore value and their turnScore value is greater than or equal to 100. If true, it will change the value of the isWon property to true"
 Expect(game1.winnerCheck(player1)).toEqual(Game { players{1 { name: "Jimmy", gameScore: 87, turnScore: 0 }}, {2 { name: "Jan", gamescore: 96, turnScore: 4}}, lastIdUsed: 2, currentPlayer: 2, isWon: true})
+
+Describe: Game.prototype.takeTurn(player)
+Test: "It will call the dieRoll method, call the tallyTurnScore method, and call the winnerCheck method."
+Expect(game1.takeTurn(player1)).toEqual(Game { players{1 { name: "Jimmy", gameScore: 87, turnScore: 0 }}, {2 { name: "Jan", gamescore: 96, turnScore: 4}}, lastIdUsed: 2, currentPlayer: 2, isWon: true}) 

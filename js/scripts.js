@@ -63,10 +63,17 @@ Game.prototype.winnerCheck = function(player) {
   }
 };
 
+Game.prototype.takeTurn = function(player) {
+  const roll = this.dieRoll();
+  this.tallyTurnScore(player, roll);
+  this.winnerCheck(player);
+  return roll;
+}
+
 
 //Testing
 let game1 = new Game();
 let player1 = new Player("Jimmy");
-let player2 = new Player("Pam");
+let player2 = new Player("Jan");
 game1.addPlayer(player1);
 game1.addPlayer(player2);
