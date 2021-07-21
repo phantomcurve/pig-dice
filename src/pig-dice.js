@@ -1,12 +1,12 @@
 // Business Logic for Pig Dice 
 
-function Player(name) {
+export function Player(name) {
   this.name = name;
   this.gameScore = 0;
   this.turnScore = 0;
 } 
 
-function Game() {
+export function Game() {
   this.players = {};
   this.lastIdUsed = 0;
   this.currentPlayer = 1;
